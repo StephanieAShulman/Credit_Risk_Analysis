@@ -22,7 +22,9 @@ In an effort to improve the credit card application process and reduce the numbe
         confusion_matrix(y_test, y_pred)
         # Generate a classification report
         classification_report(y_test, y_pred)
-![Predicting](https://user-images.githubusercontent.com/30667001/162927741-2d63d54a-f549-44b1-8fd7-30dfe83a851c.png)
+
+### Logistic Regression Model
+![Logit2](https://user-images.githubusercontent.com/30667001/162936618-9c49a89a-cb0e-48c1-a607-6786512d4c7c.png)
 
 Metrics used to validate model performance may be influenced by the number of events.
 * Accuracy: Ratio of true positive and negative observations to all observations (TP + TN / n) </br>
@@ -38,9 +40,6 @@ The classification report generates additional metrics for assessing model perfo
 Precision and recall can come at the expense of one another. An F1 score accommodates instances where both are important.
 * F1 Score: A single score that provides a balance between recall and precision in a single value (2 * precision * recall / precision + recall)</br>
 
-### Logistic Regression Model
-![Logit2](https://user-images.githubusercontent.com/30667001/162936618-9c49a89a-cb0e-48c1-a607-6786512d4c7c.png)
-
 ### Techniques to Address Overfitting of the Model
 With metrics for evaluating a model determined, additional models were run to address the uneven number of good candidates versus bad.
 1. Logistic Regression Models with Alternative Sampling to Address Class Imbalance </br>
@@ -53,6 +52,7 @@ With metrics for evaluating a model determined, additional models were run to ad
    B. Easy Ensemble Classification
 
 ## Results
+![Predicting](https://user-images.githubusercontent.com/30667001/162927741-2d63d54a-f549-44b1-8fd7-30dfe83a851c.png)
 
 ### Metrics for All Models
 | Model    | Accuracy | Precision | Recall     | F1 Score |
