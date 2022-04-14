@@ -10,7 +10,7 @@ Predicting credit risk with Machine Learning models built and evaluated with Pyt
 - Libraries: Pandas, NumPy 1.20.3, SciPy 1.7.1, Scikit-Learn 0.24.0
 
 ## Background
-In an effort to improve the credit card application process and reduce the number individuals defaulting on loan repayment, Fast Lending - a peer-to-peer lending services company - applied Machine Learning models to predict the risk of extending credit to applicants. The goal was to maximize the identification of good candidates. However, as good candidates outweigh bad, additional sampling and modeling techniques were employed to improve the ability of the model to predict which individuals could be considered a potential risk for failing to repay the loan.
+In an effort to improve the credit card application process and reduce the number individuals defaulting on loan repayments, Fast Lending - a peer-to-peer lending services company - applied Machine Learning models to predict the risk of extending credit to applicants. The goal was to maximize the identification of good candidates. As good candidates outweigh bad, however, additional sampling and modeling techniques were employed to improve the ability of the model to predict which individuals could be considered a potential risk for failing to repay the loan.
 
 ### Classification Model - General Steps
         # Train the model
@@ -34,14 +34,14 @@ The classification report generates additional metrics for assessing model perfo
 * Precision: Ratio of true positives to total predicted positives (TP / TP + FP) </br>
   This score is useful where missing a false positive could be costly (minimizes FP).</br>
   
-* Recall: Ratio of true positives to total acutal positives (TP / TP + FN) </br>
+* Recall: Ratio of true positives to total actual positives (TP / TP + FN) </br>
   This score is useful when missing a false negative could be costly (minimizes FN).
 
 Precision and recall can come at the expense of one another. An F1 score accommodates instances where both are important.
 * F1 Score: A single score that provides a balance between recall and precision in a single value (2 * precision * recall / precision + recall)</br>
 
 ### Techniques to Address Overfitting of the Model
-With metrics for evaluating a model determined, additional models were run to address the uneven number of good candidates versus bad.
+With metrics for evaluating a model determined, additional models were run on previously scaled data to address the uneven number of good candidates versus bad.
 1. Logistic Regression Models with Alternative Sampling to Address Class Imbalance </br>
    A. Naïve Random Oversampling </br>
    B. Synthetic Minority Oversampling Technique (SMOTE) </br>
@@ -66,7 +66,4 @@ With metrics for evaluating a model determined, additional models were run to ad
 
 ## Summary
 
-* Accurary - 
-* Precision - 
-* Recall - 
-* F1 Score - 
+To address the overfitting that can occur when logistic regression is implemented with unbalanced data, six additional models were run. All models appeared to have equal precision (99%). The four that resampled data for logistic regression classification did not perform as well as the two ensemble classifiers. Precision for the four ranged between 44% and 65% and had F1 scores between 60% and 79%. Both ensemble approaches – Balanced Random Forest and Easy Ensemble Classifier – had high degrees of recall and F1 scores, with EEC slightly outperforming random forest classification. When determining which model to implement, the EEC model appears to be the best choice among all models.
