@@ -1,8 +1,8 @@
 
 # Credit Risk Analysis
-![Riks](https://user-images.githubusercontent.com/30667001/163343687-c8d26e19-66d9-40da-9b66-735c59abda88.png)
-
 Predicting credit risk with Machine Learning models built and evaluated with Python
+
+![Riks](https://user-images.githubusercontent.com/30667001/163343687-c8d26e19-66d9-40da-9b66-735c59abda88.png)
 
 ## Resources
 - Data Source: LoanStats_2019Q1.csv
